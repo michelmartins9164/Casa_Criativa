@@ -1,21 +1,54 @@
-function on0ff() {
-document
-.querySelector("#modal")
-.classList
-.toggle("hide")
+
+
+function onOff() {
+    document
+    .querySelector("#modal")
+
+    .classList
+
+    .toggle("hide")
+
+    document
+    .querySelector("body")
+    .classList
+    .toggle("hideScroll")
+
+    document
+    .querySelector ("#modal")
+    .classList
+    .toggle ("addScroll")
+
+
 }
 
 
-document
-.querySelector
-.addEventListenner("click", on0ff)
+function checkFields(event) {
 
-document
-.querySelector
-.classList
-.toggle("hideScroll")
+    const valuesToCheck = [
+        "title",
+        "category",
+        "image",
+        "description",
+        "link",
 
-document
-.querySelector("#modal")
-.classList
-.toggle("addScroll")
+    ]
+
+    const isEmpity = valuesToCheck.find(function(value) {
+        
+        const checkIfIsString = typeof event.target[value].value === "string"
+        const checkIfIsEmpity = !event.target[value].value.trim()
+        
+        if(checkIfIsString && checkIfIsEmpity) {
+            return true
+        }
+    })
+
+    if(isEmpity) {
+        event.preventDefault()
+        alert("Por favor, preencha todos os campos")
+    }
+
+}
+
+
+
