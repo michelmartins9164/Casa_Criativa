@@ -17,22 +17,20 @@ db.serialize(function() {
     `)
 
     //DELETAR UM DADO DA TABELA
-
     // db.run(`DELETE FROM ideas `, function(err) {
     //  if (err) return console.log(err)
 
     //  console.log("DELETEI", this)
     // }) 
 
-
-
+   
+   
     // CONSULTAR DADOS NA TABELA
-
     //db.all(`SELECT * FROM ideas`, function(err, rows) {
-    //if (err) return console.log (err)
+        //if (err) return console.log (err)
 
-    // console.log(rows)
-    // })
+       // console.log(rows)
+   // })
 
 })
 
